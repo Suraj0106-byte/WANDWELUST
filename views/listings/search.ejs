@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Search Results - WanderLust</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="container mt-4">
+
+  <h3>Search results for "<%= query %>"</h3>
+
+  <div class="row mt-4">
+    <% results.forEach(r => { %>
+      <div class="col-md-3 mb-4">
+        <div class="card shadow-sm">
+          <img src="<%= r.image.url %>" class="card-img-top" height="200">
+
+          <div class="card-body">
+            <h5><%= r.title %></h5>
+            <a href="/listings/<%= r._id %>" class="btn btn-sm btn-primary mt-2">View</a>
+          </div>
+        </div>
+      </div>
+    <% }) %>
+  </div>
+
+</div>
+
+</body>
+</html>

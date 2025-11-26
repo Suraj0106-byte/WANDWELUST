@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Profile - WanderLust</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+
+<%- include("../partials/navbar") %>
+
+<div class="container mt-5">
+  <h2 class="fw-bold">My Profile</h2>
+  <p class="text-muted">Basic information about your account</p>
+
+  <div class="card shadow p-4 mt-3">
+    <h5>Phone:</h5>
+    <p><%= session.phone %></p>
+  </div>
+</div>
+
+</body>
+</html>
