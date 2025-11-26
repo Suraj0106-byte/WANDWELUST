@@ -303,6 +303,8 @@ app.get("/admin/dashboard", requireAdminLogin, (req, res) => {
 // --------------------------------------------------
 // START SERVER
 // --------------------------------------------------
-app.listen(8080, () => {
-  console.log("server is listening to port 8080");
+const port = process.env.PORT || 8080;   // or 3000, any default
+app.listen(port, () => {
+  console.log(`Server running on port ${port}`);
 });
+
